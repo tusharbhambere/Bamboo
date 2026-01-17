@@ -45,8 +45,8 @@ extension ResponsiveUtil on BuildContext {
 
 /// Check the current theme mode of the application.
 extension ModeExtension on BuildContext {
-  /// Returns the current platform brightness of the application.
-  Brightness get mode => MediaQuery.of(this).platformBrightness;
+  /// Returns the current brightness of the application theme.
+  Brightness get mode => Theme.of(this).brightness;
 
   /// Returns true if the current theme mode is dark.
   bool get isDark => mode == Brightness.dark;
